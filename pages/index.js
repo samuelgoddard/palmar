@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Layout from '@/components/layout'
 import Container from '@/components/container'
 import FancyLink from '@/components/fancyLink'
@@ -9,8 +9,13 @@ import { NextSeo } from 'next-seo'
 
 export default function Home() {
   const containerRef = useRef(null)
+  const [currentColorTheme, setCurrentColorTheme] = useState(0);
+
   let colorThemes = ['bg-pink text-black', 'bg-green text-black', 'bg-black text-pink', 'bg-brown text-pink', 'bg-off-white text-black'];
-  let currentColorTheme = Math.floor(Math.random()*colorThemes.length);
+
+  useEffect(() => {
+    setCurrentColorTheme(Math.floor(Math.random()*colorThemes.length))
+  }, [currentColorTheme]);
 
   return (
     <Layout>
