@@ -7,6 +7,7 @@ import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {
   const containerRef = useRef(null)
@@ -37,34 +38,82 @@ export default function Home() {
 
                 {/* Mobile */}
                 <div className="block md:hidden absolute z-100 top-0 right-0 w-[100vw] mt-[30vw]">
-                    <div class="relative flex flex-row space-x-[20px] md:space-x-[50px] overflow-x-hidden">
-                      <div class="animate-marqueeH whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
+                    <div className="relative flex flex-row space-x-[20px] md:space-x-[50px] overflow-x-hidden">
+                      <div className="animate-marqueeH whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <Image
+                            className="w-[50vw] h-full object-cover object-center" 
+                            alt="Dog"
+                            src={'https://placedog.net/500/640'}
+                            layout="fill"
+                            objectFit="cover"
+                          />
                         </div>
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <Image
+                            className="w-[50vw] h-full object-cover object-center" 
+                            alt="Dog"
+                            src={'https://placedog.net/500/640'}
+                            layout="fill"
+                            objectFit="cover"
+                          />
                         </div>
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <Image
+                            className="w-[50vw] h-full object-cover object-center" 
+                            alt="Dog"
+                            src={'https://placedog.net/500/640'}
+                            layout="fill"
+                            objectFit="cover"
+                          />
                         </div>
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <Image
+                            className="w-[50vw] h-full object-cover object-center" 
+                            alt="Dog"
+                            src={'https://placedog.net/500/640'}
+                            layout="fill"
+                            objectFit="cover"
+                          />
                         </div>
                       </div>
 
-                      <div class="absolute top-0 animate-marqueeH2 whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
+                      <div className="absolute top-0 animate-marqueeH2 whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <Image
+                            className="w-[50vw] h-full object-cover object-center" 
+                            alt="Dog"
+                            src={'https://placedog.net/500/640'}
+                            layout="fill"
+                            objectFit="cover"
+                          />
                         </div>
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <Image
+                            className="w-[50vw] h-full object-cover object-center" 
+                            alt="Dog"
+                            src={'https://placedog.net/500/640'}
+                            layout="fill"
+                            objectFit="cover"
+                          />
                         </div>
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <Image
+                            className="w-[50vw] h-full object-cover object-center" 
+                            alt="Dog"
+                            src={'https://placedog.net/500/640'}
+                            layout="fill"
+                            objectFit="cover"
+                          />
                         </div>
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <Image
+                            className="w-[50vw] h-full object-cover object-center" 
+                            alt="Dog"
+                            src={'https://placedog.net/500/640'}
+                            layout="fill"
+                            objectFit="cover"
+                          />
                         </div>
                       </div>
                     </div>
@@ -73,8 +122,8 @@ export default function Home() {
                   {/* Desktop */}
 
                   <div className="hidden md:block absolute z-100 top-0 right-0 md:bottom-0 w-[100vw] md:w-[38%] xl:w-[26%] 3xl:w-[26%] h-[100vh] overflow-hidden mr-[40px]">
-                    <div class="relative flex flex-col space-y-[20px] md:space-y-[50px] overflow-y-hidden">
-                      <div class="transform animate-marquee whitespace-nowrap flex flex-col space-y-[20px] md:space-y-[50px] w-full">
+                    <div className="relative flex flex-col space-y-[20px] md:space-y-[50px] overflow-y-hidden">
+                      <div className="transform animate-marquee whitespace-nowrap flex flex-col space-y-[20px] md:space-y-[50px] w-full">
                         <div className="h-full w-full">
                           <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
                         </div>
