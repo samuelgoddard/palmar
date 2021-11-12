@@ -1,11 +1,11 @@
 export default {
   defaultTitle: 'Palmar | A Divergent Parts Modelling Agency',
-  description: 'A simple Next.js starter kit with Tailwind, Framer Motion and Locomotive.',
+  description: 'Hello, we are Palmar, a divergent parts-modelling agency repping Black, Asian and all other Ethnic minority hand models across the UK.',
   titleTemplate: '%s | Palmar',
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://sg-next-tailwind-motion.vercel.app/',
+    url: 'https://palmar.vercel.app/',
     site_name: 'Palmar',
   },
   twitter: {

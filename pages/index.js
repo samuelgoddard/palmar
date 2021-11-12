@@ -38,13 +38,13 @@ export default function Home() {
 
                 <div className="absolute top-0 right-0 left-0 md:left-auto md:bottom-0 z-[10000] px-6 md:px-[20px] py-3 md:py-6 hidden md:block">
                   <span className="h-full flex flex-row md:flex-col font-sans uppercase text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">
-                    <span className="block flex-1 text-rotate text-center">Built</span>
+                    <span className="block w-auto mb-[4vh] text-rotate text-center">Built</span>
                     <span className="block flex-1 text-rotate text-center">on</span>
                     <span className="block flex-1 text-rotate text-center">trust</span>
                     <span className="block flex-1 text-rotate text-center">and</span>
                     <span className="block flex-1 text-rotate text-center">true</span>
                     <span className="block flex-1 text-rotate text-center">creative</span>
-                    <span className="block flex-1 text-rotate text-center">spirit</span>
+                    <span className="block w-auto mt-[4vh] text-rotate text-center">spirit</span>
                   </span>
                 </div>
 
