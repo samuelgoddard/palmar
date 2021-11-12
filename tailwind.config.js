@@ -18,10 +18,10 @@ module.exports = {
     },
     extend: {
       animation: {
-        marquee: 'marquee 25s linear infinite',
-        marquee2: 'marquee2 25s linear infinite',
-        marqueeH: 'marqueeH 25s linear infinite',
-        marqueeH2: 'marqueeH2 25s linear infinite',
+        marquee: 'marquee 120s linear infinite',
+        marquee2: 'marquee2 120s linear infinite',
+        marqueeH: 'marqueeH 50s linear infinite',
+        marqueeH2: 'marqueeH2 50s linear infinite',
       },
       keyframes: {
         marquee: {
