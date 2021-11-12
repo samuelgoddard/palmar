@@ -20,13 +20,23 @@ module.exports = {
       animation: {
         marquee: 'marquee 25s linear infinite',
         marquee2: 'marquee2 25s linear infinite',
+        marqueeH: 'marqueeH 25s linear infinite',
+        marqueeH2: 'marqueeH2 25s linear infinite',
       },
       keyframes: {
         marquee: {
+          '0%': { transform: 'translateY(0%)' },
+          '100%': { transform: 'translateY(-100%)' },
+        },
+        marquee2: {
+          '0%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(0%)' },
+        },
+        marqueeH: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-100%)' },
         },
-        marquee2: {
+        marqueeH2: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0%)' },
         },
@@ -36,6 +46,7 @@ module.exports = {
         'white': '#FFF',
         'off-white': '#E7E7E7',
         'pink': '#CC997D',
+        'blush': '#DBC9BF',
         'green': '#93A38D',
         'blue': '#AEB4BD',
         'brown': '#533D30'

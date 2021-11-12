@@ -11,6 +11,8 @@ export default function App({ Component, pageProps }) {
     <>
       <DefaultSeo {...SEO} />
 
+      <div className="grain fixed w-full h-full inset-0 pointer-events-none z-[100]"></div>
+
       <AnimatePresence exitBeforeEnter>
         <Component {...pageProps} key={router.asPath} />
       </AnimatePresence>

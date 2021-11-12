@@ -1,12 +1,12 @@
 export default {
-  defaultTitle: 'Boilerplate | Next x Tailwind x Motion x Locomotive Scroll',
+  defaultTitle: 'Palmar | A Divergent Parts Modelling Agency',
   description: 'A simple Next.js starter kit with Tailwind, Framer Motion and Locomotive.',
-  titleTemplate: '%s | Next x Tailwind x Motion x Locomotive',
+  titleTemplate: '%s | Palmar',
   openGraph: {
     type: 'website',
     locale: 'en_GB',
     url: 'https://sg-next-tailwind-motion.vercel.app/',
-    site_name: 'Next x Tailwind x Motion x Locomotive',
+    site_name: 'Palmar',
   },
   twitter: {
     handle: '@samuelgoddard',
