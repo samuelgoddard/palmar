@@ -28,7 +28,7 @@ export default function Founders() {
                 animate="enter"
                 exit="exit"
               >
-                <m.main variants={fade} className="p-6 relative pb-16 md:pb-24 xl:pb-32 bg-off-white text-off-black">
+                <m.main variants={fade} className="p-4 md:p-6 relative pb-16 md:pb-24 xl:pb-32 bg-off-white text-black">
 
                   <article className="flex flex-wrap">
                     <div className="w-full relative z-10">
@@ -40,11 +40,11 @@ export default function Founders() {
                     </div>
 
                     <div className="w-full flex flex-wrap">
-                      <div className="w-full md:w-5/12 lg:w-1/2 xl:w-7/12 mt-[-10vw] md:mt-[-13vw] mb-6 md:mb-0 overflow-hidden" data-scroll data-scroll-speed={1.3}>
+                      <div className="w-full md:w-5/12 lg:w-1/2 xl:w-7/12 mt-[13px] md:mt-[-13vw] mb-6 md:mb-0 overflow-hidden" data-scroll data-scroll-speed={1.3}>
                         <img className="w-full scale-105" src="/images/03.jpg" alt="dog" />
                       </div>
                       
-                      <div className="w-full md:max-w-[380px] xl:max-w-[400px] 2xl:max-w-[440px] 3xl:max-w-[500px] mx-auto font-serif text-xl xl:text-2xl leading-tight tracking-tight content md:mt-16 xl:mt-24">
+                      <div className="w-11/12 md:w-full md:max-w-[380px] xl:max-w-[400px] 2xl:max-w-[440px] 3xl:max-w-[500px] md:mx-auto font-serif text-xl xl:text-2xl leading-tight tracking-tight content md:mt-16 xl:mt-24">
                         <p>Hello, we are Palmar, a divergent parts-modelling agency repping Black, Asian and all other Ethnic minority hand models across the UK.</p>
 
                         <p>Palmar blazes its own trail; disturbs the status quo; provides opportunity and support.</p>
@@ -67,17 +67,21 @@ export default function Founders() {
                   </article>
                 </m.main>
 
-                <m.footer variants={fade} className="p-6 relative bg-off-white text-off-black">
-                  <div className="flex">
-                    <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8">© Palmar Agency 2021</span>
+                <m.footer variants={fade} className="p-4 md:p-6 relative bg-off-white text-black">
+                  <div className="flex flex-wrap">
+                    <span className="block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">© Palmar Agency 2021</span>
                     
-                    <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 md:mr-24">Site by <a href="https://shiftwalk.studio" rel="noopener noreferrer" target="_blank" className="group relative">Shiftwalk <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span></a></span>
+                    <span className="block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0 md:mr-[15vw] xl:mr-[20vw]">Site by <a href="https://shiftwalk.studio" rel="noopener noreferrer" target="_blank" className="group relative">Shiftwalk <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></span>
 
-                    <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8">
-                      <Link href="/"><a className="group relative">Back to home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span></a></Link>
+                    <span className="hidden md:block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">
+                      <Link href="/"><a className="group relative">Back to home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
                     </span>
                     
-                    <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight ml-auto"><Link href="/contact"><a className="group relative">Contact Us <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span></a></Link></span>
+                    <span className="block w-1/2 md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight ml-auto"><Link href="/contact"><a className="group relative">Contact Us <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link></span>
+
+                    <span className="block w-1/2 md:w-auto text-right md:hidden ml-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0">
+                      <Link href="/"><a className="group relative">Back to home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
+                    </span>
                   </div>
                 </m.footer>
               </m.div>
