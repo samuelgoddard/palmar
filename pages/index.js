@@ -162,19 +162,25 @@ export default function Home() {
 
                       <div className="2xl:ml-auto flex space-x-6">
                         <Link href="/founders-message">
-                          <a className="block uppercase underline text-sm md:text-base">
+                          <a className="block uppercase text-sm md:text-base group">
                             Founders Message
+
+                            <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
                           </a>
                         </Link>
 
                         <Link href="/contact">
-                          <a className="block uppercase underline text-sm md:text-base">
+                          <a className="block uppercase  text-sm md:text-base group">
                             Contact
+                            
+                            <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
                           </a>
                         </Link>
 
-                        <a href="https://www.instagram.com/palmaragency/" target="_blank" rel="noopener noreferrer" className="block uppercase underline text-sm md:text-base">
+                        <a href="https://www.instagram.com/palmaragency/" target="_blank" rel="noopener noreferrer" className="block uppercase text-sm md:text-base group">
                           Instagram
+                          
+                          <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
                         </a>
                       </div>
                     </div>

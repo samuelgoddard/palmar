@@ -5,7 +5,7 @@
   }
 
   & > p > a {
-    @apply underline hover:text-opacity-25 focus:text-opacity-25;
+    @apply underline hover:opacity-50 focus:opacity-50 transition-opacity ease-in-out duration-500;
   }
 
   & > h1, & > .h1 {

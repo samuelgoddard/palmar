@@ -40,13 +40,13 @@ export default function Contact() {
                           <div className="w-full md:w-1/2 mb-12 md:mb-0 md:pr-12 xl:pr-24">
                             <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-1">All enquiries</span>
 
-                            <a href="mailto:hello@palmar.agency" className="block font-serif text-blush underline text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white">hello@palmar.agency</a>
+                            <a href="mailto:hello@palmar.agency" className="inline-block group font-serif text-blush relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white">hello@palmar.agency <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span></a>
 
                             <hr className="border-b border-t-0 border-current my-6 md:my-8 xl:my-12 opacity-50" />
 
                             <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-1">Social</span>
 
-                            <a href="https://www.instagram.com/palmaragency/" target="_blank" rel="noopener noreferrer" className="block font-serif text-blush underline text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white">Instagram</a>
+                            <a href="https://www.instagram.com/palmaragency/" target="_blank" rel="noopener noreferrer" className="inline-block group font-serif text-blush relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white">Instagram <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span></a>
                           </div>         
                           <div className="w-full md:w-1/2">
                             <p className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-1">I am a:</p>
@@ -107,9 +107,11 @@ export default function Contact() {
                     <div className="flex">
                       <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8">© Palmar Agency 2021</span>
                       
-                      <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 md:mr-24">Site by <a href="https://shiftwalk.studio" rel="noopener noreferrer" target="_blank" className="underline">Shiftwalk</a></span>
+                      <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 md:mr-24">Site by <a href="https://shiftwalk.studio" rel="noopener noreferrer" target="_blank" className="group relative">Shiftwalk <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span></a></span>
 
-                      <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8"><Link href="/"><a className="underline">Back to home</a></Link></span>
+                      <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8">
+                        <Link href="/"><a className="group relative">Back to home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span></a></Link>
+                      </span>
                     </div>
                   </m.footer>
                 </m.div>
