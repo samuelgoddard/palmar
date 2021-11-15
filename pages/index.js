@@ -53,7 +53,7 @@ export default function Home() {
                     <div class="relative flex flex-row space-x-[20px] md:space-x-[50px] overflow-x-hidden">
                       <div class="animate-marqueeH whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-[50vw] h-full object-cover object-center" src="/images/01.jpg" alt="Dog" />
 
                           {/* <Image
                             alt="Mountains"
@@ -63,28 +63,28 @@ export default function Home() {
                           /> */}
                         </div>
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-[50vw] h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-[50vw] h-full object-cover object-center" src="/images/03.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-[50vw] h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
                         </div>
                       </div>
 
                       <div class="absolute top-0 animate-marqueeH2 whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-[50vw] h-full object-cover object-center" src="/images/01.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-[50vw] h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-[50vw] h-full object-cover object-center" src="/images/03.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-[50vw] h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
                         </div>
                       </div>
                     </div>
@@ -96,55 +96,55 @@ export default function Home() {
                     <div class="relative flex flex-col space-y-[20px] md:space-y-[50px] overflow-y-hidden">
                       <div class="transform animate-marquee whitespace-nowrap flex flex-col space-y-[20px] md:space-y-[50px] w-full">
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/01.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/03.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/01.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/03.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
                         </div>
                       </div>
 
                       <div class="absolute top-0 transform animate-marquee2 whitespace-nowrap flex flex-col space-y-[20px] md:space-y-[50px] w-full">
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/01.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/03.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/01.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/03.jpg" alt="Dog" />
                         </div>
                         <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="https://placedog.net/500/640" alt="Dog" />
+                          <img className="w-full h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
                         </div>
                       </div>
                     </div>

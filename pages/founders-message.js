@@ -41,7 +41,7 @@ export default function Founders() {
 
                     <div className="w-full flex flex-wrap">
                       <div className="w-full md:w-5/12 lg:w-1/2 xl:w-7/12 mt-[-10vw] md:mt-[-13vw] mb-6 md:mb-0" data-scroll data-scroll-speed={1.3}>
-                        <img className="w-full" src="https://placedog.net/500/640" alt="dog" />
+                        <img className="w-full" src="/images/01.jpg" alt="dog" />
                       </div>
                       
                       <div className="w-full md:max-w-[380px] xl:max-w-[400px] 2xl:max-w-[440px] 3xl:max-w-[500px] mx-auto font-serif text-xl xl:text-2xl leading-tight tracking-tight content md:mt-16 xl:mt-24">

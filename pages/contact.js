@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import Layout from '@/components/layout'
-import Container from '@/components/container'
-import FancyLink from '@/components/fancyLink'
 import { fade } from '@/helpers/transitions'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
@@ -10,6 +8,7 @@ import Link from 'next/link'
 
 export default function Contact() {
   const containerRef = useRef(null)
+  const [formType, setFormType] = useState('client');
 
   return (
     <Layout>
@@ -50,21 +49,54 @@ export default function Contact() {
                             <a href="https://www.instagram.com/palmaragency/" target="_blank" rel="noopener noreferrer" className="block font-serif text-blush underline text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white">Instagram</a>
                           </div>         
                           <div className="w-full md:w-1/2">
-                            <form>
-                              <label for="name" className="sr-only">Your Name</label>
-                              <input type="text" id="name" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full p-6 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Your Name" />
+                            <p className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-1">I am a:</p>
+                            <div className="mb-8 flex">
+                              <button
+                                className={`block transition-colors ease-in-out duration-500 text-black w-auto py-2 px-3 font-sans uppercase text-sm md:text-base font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-4 ${ formType == 'client' ? 'bg-blush hover:bg-blush' : 'bg-pink hover:bg-blush' }`}
+                                onClick={() => setFormType('client')}
+                              >Client</button>
+                            
+                              <button
+                                className={`block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-auto py-2 px-3 font-sans uppercase text-sm md:text-base font-normal leading-[1.15] md:leading-[1.2] tracking-tight ${ formType == 'model' ? 'bg-blush hover:bg-blush' : 'bg-pink hover:bg-blush' }`}
+                                onClick={() => setFormType('model')}
+                              >Model</button>
+                            </div>
 
-                              <label for="enquiry" className="sr-only">Enquiry Type</label>
-                              <input type="select" id="enquiry" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full p-6 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Enquiry Type" />
+                            { formType == 'client' && (
+                              <form className="">
+                                <label for="name" className="sr-only">Your Name</label>
+                                <input type="text" id="name" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Your Name" />
 
-                              <label for="email" className="sr-only">Email Address</label>
-                              <input type="email" id="email" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full p-6 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Email Address" />
+                                <label for="email" className="sr-only">Email Address</label>
+                                <input type="email" id="email" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Email Address" />
 
-                              <label for="upload" className="sr-only">Upload Images</label>
-                              <input type="text" id="upload" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full p-6 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Upload Images" />
+                                <label for="Message" className="sr-only">Message Images</label>
+                                <textarea id="Message" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Your enquiry..." />
 
-                              <button type="submit" className="block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-full p-6 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">Send Message</button>
-                            </form>
+                                <button type="submit" className="block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">Send Message</button>
+                              </form>
+                            )}
+
+                            { formType == 'model' && (
+                              <form className="">
+                                <label for="name" className="sr-only">Your Name</label>
+                                <input type="text" id="name" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Your Name" />
+
+                                <label for="email" className="sr-only">Email Address</label>
+                                <input type="email" id="email" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Email Address" />
+
+                                <label for="portfolio" className="sr-only">Portfolio Link</label>
+                                <input type="portfolio" id="portfolio" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Portfolio Link" />
+
+                                <label for="social" className="sr-only">Social Links</label>
+                                <input type="social" id="social" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Social Links" />
+
+                                <label for="social" className="sr-only">Image Uploads</label>
+                                <input type="social" id="social" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Image Uploads" />
+
+                                <button type="submit" className="block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">Send Message</button>
+                              </form>
+                            )}
                           </div>
                         </div>
                       </div>
