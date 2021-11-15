@@ -52,8 +52,8 @@ export default function Home() {
                 <div className="block md:hidden absolute z-100 top-0 right-0 w-[100vw] mt-[30vw]">
                     <div class="relative flex flex-row space-x-[20px] md:space-x-[50px] overflow-x-hidden">
                       <div class="animate-marqueeH whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
-                        <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="/images/01.jpg" alt="Dog" />
+                        <div className="h-full w-[50vw] overflow-hidden">
+                          <img className="w-[50vw] h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
 
                           {/* <Image
                             alt="Mountains"
@@ -62,29 +62,29 @@ export default function Home() {
                             objectFit="contain"
                           /> */}
                         </div>
-                        <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
+                        <div className="h-full w-[50vw] overflow-hidden">
+                          <img className="w-[50vw] h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="/images/03.jpg" alt="Dog" />
+                        <div className="h-full w-[50vw] overflow-hidden">
+                          <img className="w-[50vw] h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="/images/04.jpg" alt="Dog" />
+                        <div className="h-full w-[50vw] overflow-hidden">
+                          <img className="w-[50vw] h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
                         </div>
                       </div>
 
                       <div class="absolute top-0 animate-marqueeH2 whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
-                        <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="/images/01.jpg" alt="Dog" />
+                        <div className="h-full w-[50vw] overflow-hidden">
+                          <img className="w-[50vw] h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
+                        <div className="h-full w-[50vw] overflow-hidden">
+                          <img className="w-[50vw] h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="/images/03.jpg" alt="Dog" />
+                        <div className="h-full w-[50vw] overflow-hidden">
+                          <img className="w-[50vw] h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-[50vw]">
-                          <img className="w-[50vw] h-full object-cover object-center" src="/images/04.jpg" alt="Dog" />
+                        <div className="h-full w-[50vw] overflow-hidden">
+                          <img className="w-[50vw] h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
                         </div>
                       </div>
                     </div>
@@ -95,56 +95,56 @@ export default function Home() {
                   <div className="hidden md:block absolute z-100 top-0 right-0 md:bottom-0 w-[100vw] md:w-[38%] xl:w-[40%] 3xl:w-[42%] h-[100vh] overflow-hidden mr-[60px]">
                     <div class="relative flex flex-col space-y-[20px] md:space-y-[50px] overflow-y-hidden">
                       <div class="transform animate-marquee whitespace-nowrap flex flex-col space-y-[20px] md:space-y-[50px] w-full">
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/01.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/03.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/04.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/01.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/03.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/04.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
                         </div>
                       </div>
 
                       <div class="absolute top-0 transform animate-marquee2 whitespace-nowrap flex flex-col space-y-[20px] md:space-y-[50px] w-full">
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/01.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/03.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/04.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/01.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/02.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/03.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full">
-                          <img className="w-full h-full object-cover object-center" src="/images/04.jpg" alt="Dog" />
+                        <div className="h-full w-full overflow-hidden">
+                          <img className="w-full h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
                         </div>
                       </div>
                     </div>
