@@ -47,7 +47,7 @@ export default function Contact() {
                 animate="enter"
                 exit="exit"
               >
-                <m.div variants={fade} className="min-h-screen bg-black text-pink flex flex-wrap">
+                <m.div variants={fade} className="min-h-screen bg-black text-pink selection:bg-pink selection:text-black flex flex-wrap">
                   <m.main variants={fade} className="p-4 md:p-6 relative pb-16 md:pb-24 xl:pb-32 w-full mb-auto">
 
                     <article className="flex flex-wrap">
@@ -80,40 +80,40 @@ export default function Contact() {
                             </a>
                           </div>         
                           <div className="w-full md:w-1/2">
-                            <p className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-1 relative overflow-hidden">
-                              <m.span variants={reveal} className="block">I am a:</m.span>
-                            </p>
+                            <span className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">
+                              <m.span variants={reveal} className="block">You want to</m.span>
+                            </span>
 
                             <div className="mb-8 flex">
                               <button
-                                className={`block transition-colors ease-in-out duration-500 text-black w-auto py-2 px-3 font-sans uppercase text-sm md:text-base font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-4 ${ formType == 'client' ? 'bg-blush hover:bg-blush' : 'bg-pink hover:bg-blush' }`}
+                                className={`block transition-colors ease-in-out duration-500 text-black w-1/2 py-6 px-3 font-sans uppercase text-sm xl:text-base font-normal leading-[1.15] md:leading-[1.2] tracking-tight border-blush border mr-4 ${ formType == 'client' ? 'bg-blush ' : 'bg-transparent text-blush' }`}
                                 onClick={() => setFormType('client')}
                               >
                                 <span className="block relative overflow-hidden">
-                                  <m.span variants={reveal} className="block">Client</m.span>
+                                  <m.span variants={reveal} className="block">Ask A Question</m.span>
                                 </span>
                               </button>
                             
                               <button
-                                className={`block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-auto py-2 px-3 font-sans uppercase text-sm md:text-base font-normal leading-[1.15] md:leading-[1.2] tracking-tight ${ formType == 'model' ? 'bg-blush hover:bg-blush' : 'bg-pink hover:bg-blush' }`}
+                                className={`block transition-colors ease-in-out duration-500 bg-pink text-black w-1/2 py-6 px-3 font-sans uppercase text-sm xl:text-base font-normal leading-[1.15] md:leading-[1.2] tracking-tight border-blush border ${ formType == 'model' ? 'bg-blush ' : 'bg-transparent text-blush' }`}
                                 onClick={() => setFormType('model')}
                               >
                                 <span className="block relative overflow-hidden">
-                                  <m.span variants={reveal} className="block">Model</m.span>
+                                  <m.span variants={reveal} className="block">Be A Palmar Model</m.span>
                                 </span>
                               </button>
                             </div>
 
                             { formType == 'client' && (
                               <form className="">
-                                <label for="name" className="sr-only">Your Name</label>
-                                <input type="text" id="name" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Your Name" />
+                                <label for="name" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Name</label>
+                                <input type="text" id="name" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="" />
 
-                                <label for="email" className="sr-only">Email Address</label>
-                                <input type="email" id="email" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Email Address" />
+                                <label for="email" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Email Address</label>
+                                <input type="email" id="email" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="" />
 
-                                <label for="Message" className="sr-only">Message Images</label>
-                                <textarea id="Message" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Your enquiry..." />
+                                <label for="Message" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Message</label>
+                                <textarea id="Message" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
 
                                 <button type="submit" className="block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">
                                   <span className="block relative overflow-hidden">
@@ -125,20 +125,29 @@ export default function Contact() {
 
                             { formType == 'model' && (
                               <form className="">
-                                <label for="name" className="sr-only">Your Name</label>
-                                <input type="text" id="name" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Your Name" />
+                                <label for="name" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Name</label>
+                                <input type="text" id="name" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
 
-                                <label for="email" className="sr-only">Email Address</label>
-                                <input type="email" id="email" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Email Address" />
+                                <label for="email" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Email</label>
+                                <input type="email" id="email" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
+                                
+                                <div className="flex flex-wrap">
+                                  <div className="w-full xl:w-1/2 xl:pr-6">
+                                    <label for="insta" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Instagram Handle</label>
+                                    <input type="text" id="insta" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink"  />
+                                  </div>
 
-                                <label for="portfolio" className="sr-only">Portfolio Link</label>
-                                <input type="portfolio" id="portfolio" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Portfolio Link" />
+                                  <div className="w-full xl:w-1/2">
+                                    <label for="portfolio" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Portfolio URL</label>
+                                    <input type="text" id="portfolio" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink"  />
+                                  </div>
+                                </div>
 
-                                <label for="social" className="sr-only">Social Links</label>
-                                <input type="social" id="social" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Social Links" />
+                                <label for="image" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Upload Images</label>
 
-                                <label for="image" className="sr-only">Image Uploads</label>
-                                <input type="file" multiple id="image" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Image Uploads" />
+                                <p className="text-sm font-serif text-blush max-w-[420px] mb-5">Your shots do not have to be professional but, clear and taken against a plain background. Nails must be free of polish or enhancements. A bonus if your photos display your creativity.</p>
+
+                                <input type="file" multiple id="image" className="custom-file-input transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
 
                                 <button type="submit" className="block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">
                                   <span className="block relative overflow-hidden">

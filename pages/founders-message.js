@@ -15,6 +15,18 @@ export default function Founders() {
   const [themeContext, setThemeContext] = useContext(ThemeContext);
   const [introContext, setIntroContext] = useContext(IntroContext);
 
+  const revealImage = {
+    initial: { y: 0 },
+    enter: { 
+      y: '100%',
+      transition: { duration: 1.25, ease: [0.83, 0, 0.17, 1] }
+    },
+    exit: {
+      y: '100%',
+      transition: { duration: 0.65, ease: [0.83, 0, 0.17, 1] }
+    }
+  }
+
   useEffect(() => {
     setTimeout(() => {
       setIntroContext(true)
@@ -38,7 +50,7 @@ export default function Founders() {
                 animate="enter"
                 exit="exit"
               >
-                <m.main variants={fade} className="p-4 md:p-6 relative pb-16 md:pb-24 xl:pb-32 bg-off-white text-black">
+                <m.main variants={fade} className="p-4 md:p-6 relative pb-16 md:pb-24 xl:pb-32 bg-off-white text-black selection:bg-black selection:text-off-white">
 
                   <article className="flex flex-wrap">
                     <div className="w-full relative z-10">
@@ -51,7 +63,11 @@ export default function Founders() {
 
                     <div className="w-full flex flex-wrap">
                       <div className="w-full md:w-5/12 lg:w-1/2 xl:w-7/12 mt-[13px] md:mt-[-13vw] mb-6 md:mb-0 overflow-hidden" data-scroll data-scroll-speed={1.3}>
-                        <img className="w-full scale-105" src="/images/03.jpg" alt="dog" />
+                        <div className="relative overflow-hidden">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 bg-off-white`}></m.span>
+
+                          <img className="w-full scale-105" src="/images/03.jpg" alt="dog" />
+                        </div>
                       </div>
                       
                       <div className="w-11/12 md:w-full md:max-w-[380px] xl:max-w-[400px] 2xl:max-w-[440px] 3xl:max-w-[500px] md:mx-auto font-serif text-xl xl:text-2xl leading-tight tracking-tight content md:mt-16 xl:mt-24">

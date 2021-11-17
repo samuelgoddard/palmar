@@ -17,7 +17,7 @@ export default function Home() {
   const [introContext, setIntroContext] = useContext(IntroContext);
   const [themeContext, setThemeContext] = useContext(ThemeContext);
 
-  let colorThemes = ['bg-pink text-black', 'bg-green text-black', 'bg-black text-pink', 'bg-brown text-pink', 'bg-off-white text-black'];
+  let colorThemes = ['bg-pink text-black selection:bg-black selection:text-pink', 'bg-green text-black selection:bg-black selection:text-green', 'bg-black text-pink selection:bg-pink selection:text-black', 'bg-brown text-pink selection:bg-pink selection:text-brown', 'bg-off-white text-black selection:bg-black selection:text-white'];
 
   const reveal = {
     initial: { y: '100%' },

@@ -54,7 +54,7 @@ export default function App({ Component, pageProps }) {
                   initial="hidden"
                   animate="visible"
                   variants={introEnd}
-                  transition={{ delay: 2.75, duration: 0.66, ease: [0.83, 0, 0.17, 1] }}
+                  transition={{ delay: 3.05, duration: 0.66, ease: [0.83, 0, 0.17, 1] }}
                   className={`fixed inset-0 z-[1000] min-h-screen flex flex-col justify-center items-center ${colorThemes[themeContext]}`}
                 >
                 </m.div>
@@ -62,7 +62,7 @@ export default function App({ Component, pageProps }) {
                   initial="hidden"
                   animate="visible"
                   variants={introEnd}
-                  transition={{ delay: 2.5, duration: 0.66, ease: [0.83, 0, 0.17, 1] }}
+                  transition={{ delay: 2.6, duration: 0.66, ease: [0.83, 0, 0.17, 1] }}
                   className={`fixed inset-0 z-[1000] min-h-screen flex flex-col justify-center items-center ${colorThemes[themeContext]}`}
                 >
                   <div
@@ -74,7 +74,7 @@ export default function App({ Component, pageProps }) {
                       initial="hidden"
                       animate="visible"
                       variants={imageReveal}
-                      transition={{ delay: 0.25, duration: 1.25, ease: [.71,.37,.29,1.02] }}
+                      transition={{ delay: 0.25, duration: 1.5, ease: [0.83, 0, 0.17, 1] }}
                     >
                     </m.div>
 
@@ -84,7 +84,7 @@ export default function App({ Component, pageProps }) {
                       initial="hidden"
                       animate="visible"
                       variants={imageRevealOut}
-                      transition={{ delay: 1.75, duration: 1.25, ease: [.71,.37,.29,1.02] }}
+                      transition={{ delay: 1.75, duration: 1.5, ease: [0.83, 0, 0.17, 1] }}
                     >
                     </m.div>
 
