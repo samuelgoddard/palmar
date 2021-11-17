@@ -9,3 +9,15 @@ export const fade = {
 		transition: { duration: 0.4, ease: [0.83, 0, 0.17, 1] }
 	}
 }
+
+export const reveal = {
+	initial: { y: '100%' },
+  enter: { 
+    y: 0,
+    transition: { delay: 2.8, duration: 0.65, ease: [0.83, 0, 0.17, 1] }
+  },
+	exit: {
+    y: '100%',
+		transition: { duration: 0.65, ease: [0.83, 0, 0.17, 1] }
+	}
+}

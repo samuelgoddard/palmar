@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import Layout from '@/components/layout'
 import Container from '@/components/container'
 import FancyLink from '@/components/fancyLink'
@@ -6,18 +6,60 @@ import { fade } from '@/helpers/transitions'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
+import { IntroContext } from '@/context/intro'
+import { ThemeContext } from '@/context/theme'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Home() {
   const containerRef = useRef(null)
-  const [currentColorTheme, setCurrentColorTheme] = useState(0);
+  
+  const [introContext, setIntroContext] = useContext(IntroContext);
+  const [themeContext, setThemeContext] = useContext(ThemeContext);
 
   let colorThemes = ['bg-pink text-black', 'bg-green text-black', 'bg-black text-pink', 'bg-brown text-pink', 'bg-off-white text-black'];
 
+  const reveal = {
+    initial: { y: '100%' },
+    enter: { 
+      y: 0,
+      transition: { delay: introContext ? 0 : 3, duration: 0.65, ease: [0.83, 0, 0.17, 1] }
+    },
+    exit: {
+      y: '100%',
+      transition: { duration: 0.65, ease: [0.83, 0, 0.17, 1] }
+    }
+  }
+
+  const revealImage = {
+    initial: { y: 0 },
+    enter: { 
+      y: '-100%',
+      transition: { delay: introContext ? 0 : 3, duration: 1, ease: [0.83, 0, 0.17, 1] }
+    },
+    exit: {
+      y: '-100%',
+      transition: { duration: 0.65, ease: [0.83, 0, 0.17, 1] }
+    }
+  }
+
+  const revealX = {
+    initial: { x: '100%' },
+    enter: { 
+      x: 0,
+      transition: { delay: introContext ? 0 : 3, duration: 0.65, ease: [0.83, 0, 0.17, 1] }
+    },
+    exit: {
+      x: '100%',
+      transition: { duration: 0.65, ease: [0.83, 0, 0.17, 1] }
+    }
+  }
+
   useEffect(() => {
-    setCurrentColorTheme(Math.floor(Math.random()*colorThemes.length))
-  }, [currentColorTheme]);
+    setTimeout(() => {
+      setIntroContext(true)
+    }, 4000);
+  }, []);
 
   return (
     <Layout>      
@@ -34,33 +76,54 @@ export default function Home() {
                 animate="enter"
                 exit="exit"
               >
-                <m.main variants={fade} className={`p-4 md:p-6 h-screen relative ${colorThemes[currentColorTheme]}`}>
+                <m.main variants={fade} className={`p-4 md:p-6 h-screen relative ${colorThemes[themeContext]}`}>
 
                 <div className="absolute top-0 right-0 left-0 md:left-auto md:bottom-0 z-[10000] px-6 md:px-[20px] py-3 md:py-6 hidden md:block">
                   <span className="h-full flex flex-row md:flex-col font-sans uppercase text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">
-                    <span className="block w-auto mb-[4vh] text-rotate text-center">Built</span>
-                    <span className="block flex-1 text-rotate text-center">on</span>
-                    <span className="block flex-1 text-rotate text-center">trust</span>
-                    <span className="block flex-1 text-rotate text-center">and</span>
-                    <span className="block flex-1 text-rotate text-center">true</span>
-                    <span className="block flex-1 text-rotate text-center">creative</span>
-                    <span className="block w-auto mt-[4vh] text-rotate text-center">spirit</span>
+                    <span className="block w-auto mb-[4vh] text-rotate text-center overflow-hidden">
+                      <m.span variants={revealX} className="block">
+                        Built
+                      </m.span>
+                    </span>
+                    <span className="block flex-1 text-rotate text-center overflow-hidden">
+                      <m.span variants={revealX} className="block">
+                        on
+                      </m.span>
+                    </span>
+                    <span className="block flex-1 text-rotate text-center overflow-hidden">
+                      <m.span variants={revealX} className="block">
+                        trust
+                      </m.span>
+                    </span>
+                    <span className="block flex-1 text-rotate text-center overflow-hidden">
+                      <m.span variants={revealX} className="block">
+                        and
+                      </m.span>
+                    </span>
+                    <span className="block flex-1 text-rotate text-center overflow-hidden">
+                      <m.span variants={revealX} className="block">
+                        true
+                      </m.span>
+                    </span>
+                    <span className="block flex-1 text-rotate text-center overflow-hidden">
+                      <m.span variants={revealX} className="block">
+                        creative
+                      </m.span>
+                    </span>
+                    <span className="block w-auto mt-[4vh] text-rotate text-center overflow-hidden">
+                      <m.span variants={revealX} className="block">
+                        spirit
+                      </m.span>
+                    </span>
                   </span>
                 </div>
 
                 {/* Mobile */}
                 <div className="block md:hidden absolute z-100 bottom-0 right-0 w-[100vw] mb-[10vw]">
-                    <div class="relative flex flex-row space-x-[20px] md:space-x-[50px] overflow-x-hidden">
-                      <div class="animate-marqueeH whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
-                        <div className="h-full w-[65vw] overflow-hidden">
+                    <div className="relative flex flex-row space-x-[20px] md:space-x-[50px] overflow-x-hidden">
+                      <div className="animate-marqueeH whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
+                        <div className="h-full w-[65vw] overflow-hidden relative">
                           <img className="w-[65vw] h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
-
-                          {/* <Image
-                            alt="Mountains"
-                            src={mountains}
-                            layout="fill"
-                            objectFit="contain"
-                          /> */}
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
                           <img className="w-[65vw] h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
@@ -73,7 +136,7 @@ export default function Home() {
                         </div>
                       </div>
 
-                      <div class="absolute top-0 animate-marqueeH2 whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
+                      <div className="absolute top-0 animate-marqueeH2 whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
                         <div className="h-full w-[65vw] overflow-hidden">
                           <img className="w-[65vw] h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
                         </div>
@@ -93,57 +156,89 @@ export default function Home() {
                   {/* Desktop */}
 
                   <div className="hidden md:block absolute z-100 top-0 right-0 md:bottom-0 w-[100vw] md:w-[38%] xl:w-[40%] 3xl:w-[42%] h-[100vh] overflow-hidden mr-[60px]">
-                    <div class="relative flex flex-col space-y-[20px] md:space-y-[50px] overflow-y-hidden">
-                      <div class="transform animate-marquee whitespace-nowrap flex flex-col space-y-[20px] md:space-y-[50px] w-full">
-                        <div className="h-full w-full overflow-hidden">
+                    <div className="relative flex flex-col space-y-[20px] md:space-y-[50px] overflow-y-hidden">
+                      <div className="transform animate-marquee whitespace-nowrap flex flex-col space-y-[20px] md:space-y-[50px] w-full">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full overflow-hidden">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full overflow-hidden">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full overflow-hidden">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full overflow-hidden">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full overflow-hidden">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full overflow-hidden">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full overflow-hidden">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
                         </div>
                       </div>
 
-                      <div class="absolute top-0 transform animate-marquee2 whitespace-nowrap flex flex-col space-y-[20px] md:space-y-[50px] w-full">
-                        <div className="h-full w-full overflow-hidden">
+                      <div className="absolute top-0 transform animate-marquee2 whitespace-nowrap flex flex-col space-y-[20px] md:space-y-[50px] w-full">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full overflow-hidden">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full overflow-hidden">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full overflow-hidden">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full overflow-hidden">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full overflow-hidden">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full overflow-hidden">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
                         </div>
-                        <div className="h-full w-full overflow-hidden">
+                        <div className="h-full w-full overflow-hidden relative">
+                          <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
+
                           <img className="w-full h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
                         </div>
                       </div>
@@ -157,30 +252,84 @@ export default function Home() {
                     
                     <div className="2xl:flex 2xl:flex-wrap 2xl:items-end 2xl:w-[53vw] md:mt-auto relative z-[100]">
                       <div className="max-w-[260px] md:max-w-[500px] mb-6 xl:mb-10 2xl:mb-0 ml-[-2px] md:ml-0">
-                        <h1 className="font-serif text-[28px] md:text-[48px] xl:text-[54px] 2xl:text-[64px] leading-none tracking-tighter">Palmar is a divergent parts modelling agency representing <span className="italic">black</span>, <span className="italic">asian</span> and <span className="italic">ethnic</span> hand models.</h1>
+                        <h1 className="font-serif text-[28px] md:text-[48px] xl:text-[54px] 2xl:text-[64px] leading-none tracking-tighter mb-[-8px]">
+                          <span className="block overflow-hidden">
+                            <m.span variants={reveal} className="block">
+                              <span className="block translate-y-[-8px]">
+                                Palmar is a
+                              </span>
+                            </m.span>
+                          </span>
+
+                          <span className="block overflow-hidden">
+                            <m.span variants={reveal} className="block">
+                              <span className="block translate-y-[-8px]">
+                                divergent parts
+                              </span>
+                            </m.span>
+                          </span>
+
+                          <span className="block overflow-hidden">
+                            <m.span variants={reveal} className="block">
+                              <span className="block translate-y-[-8px]">
+                                modelling agency
+                              </span>
+                            </m.span>
+                          </span>
+
+                          <span className="block overflow-hidden">
+                            <m.span variants={reveal} className="block">
+                              <span className="block translate-y-[-8px]">
+                                representing <span className="italic">black</span>,
+                              </span>
+                            </m.span>
+                          </span>
+
+                          <span className="block overflow-hidden">
+                            <m.span variants={reveal} className="block">
+                              <span className="block translate-y-[-8px]">
+                                <span className="italic">asian</span> and <span className="italic">ethnic</span>
+                              </span>
+                            </m.span>
+                          </span>
+
+                          <span className="block overflow-hidden">
+                            <m.span variants={reveal} className="block">
+                              <span className="block translate-y-[-8px]">
+                                hand models.
+                              </span>
+                            </m.span>
+                          </span>
+                        </h1>
                       </div>
 
                       <div className="2xl:ml-auto flex space-x-4 md:space-x-6">
                         <Link href="/founders-message">
-                          <a className="block uppercase text-[12px] md:text-base group">
-                            Founders Message
+                          <a className="block uppercase text-[12px] md:text-base group overflow-hidden">
+                              <m.span variants={reveal} className="block">
+                              Founders Message
 
-                            <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
+                              <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
+                            </m.span>
                           </a>
                         </Link>
 
                         <Link href="/contact">
-                          <a className="block uppercase  text-[12px] md:text-base group">
-                            Contact
-                            
-                            <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
+                          <a className="block uppercase  text-[12px] md:text-base group overflow-hidden">
+                            <m.span variants={reveal} className="block">
+                              Contact
+                              
+                              <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
+                            </m.span>
                           </a>
                         </Link>
 
-                        <a href="https://www.instagram.com/palmaragency/" target="_blank" rel="noopener noreferrer" className="block uppercase text-[12px] md:text-base group">
-                          Instagram
-                          
-                          <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
+                        <a href="https://www.instagram.com/palmaragency/" target="_blank" rel="noopener noreferrer" className="block uppercase text-[12px] md:text-base group overflow-hidden">
+                          <m.span variants={reveal} className="block">
+                            Instagram
+                            
+                            <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
+                          </m.span>
                         </a>
                       </div>
                     </div>

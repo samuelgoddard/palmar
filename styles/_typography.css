@@ -53,3 +53,7 @@
   70% {transform: translate(9%,4%);}
   90% {transform: translate(-1%,7%);}
 }
+
+.animate-delay {
+  animation-delay: 2s !important;
+}

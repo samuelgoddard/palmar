@@ -1,15 +1,25 @@
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import Layout from '@/components/layout'
 import Container from '@/components/container'
 import FancyLink from '@/components/fancyLink'
 import { fade } from '@/helpers/transitions'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
+import { ThemeContext } from '@/context/theme'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
+import { IntroContext } from '@/context/intro'
 
 export default function Founders() {
   const containerRef = useRef(null)
+  const [themeContext, setThemeContext] = useContext(ThemeContext);
+  const [introContext, setIntroContext] = useContext(IntroContext);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIntroContext(true)
+    }, 0);
+  }, []);
 
   return (
     <Layout>

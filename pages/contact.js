@@ -1,14 +1,34 @@
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import Layout from '@/components/layout'
 import { fade } from '@/helpers/transitions'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
+import { IntroContext } from '@/context/intro'
 
 export default function Contact() {
   const containerRef = useRef(null)
   const [formType, setFormType] = useState('client');
+  const [introContext, setIntroContext] = useContext(IntroContext);
+
+  const reveal = {
+    initial: { y: '100%' },
+    enter: { 
+      y: 0,
+      transition: { duration: 0.65, ease: [0.83, 0, 0.17, 1] }
+    },
+    exit: {
+      y: '100%',
+      transition: { duration: 0.65, ease: [0.83, 0, 0.17, 1] }
+    }
+  }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIntroContext(true)
+    }, 0);
+  }, []);
 
   return (
     <Layout>
@@ -38,28 +58,50 @@ export default function Contact() {
                       <div className="w-full md:w-11/12 xl:w-10/12 mx-auto overflow-hidden">
                         <div className="flex flex-wrap">
                           <div className="w-full md:w-1/2 mb-12 md:mb-0 md:pr-12 xl:pr-24">
-                            <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-1">All enquiries</span>
+                            <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-1 relative overflow-hidden">
+                              <m.span variants={reveal} className="block">All enquiries</m.span>
+                            </span>
 
-                            <a href="mailto:hello@palmar.agency" className="inline-block group font-serif text-blush relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white">hello@palmar.agency <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span></a>
+                            <a href="mailto:hello@palmar.agency" className="inline-block group font-serif text-blush relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white overflow-hidden">
+                              <m.span variants={reveal} className="block">
+                                hello@palmar.agency <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span>
+                              </m.span>
+                            </a>
 
                             <hr className="border-b border-t-0 border-current my-6 md:my-8 xl:my-12 opacity-50" />
 
-                            <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-1">Social</span>
+                            <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-1 relative overflow-hidden">
+                              <m.span variants={reveal} className="block">Social</m.span>
+                            </span>
 
-                            <a href="https://www.instagram.com/palmaragency/" target="_blank" rel="noopener noreferrer" className="inline-block group font-serif text-blush relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white">Instagram <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span></a>
+                            <a href="https://www.instagram.com/palmaragency/" target="_blank" rel="noopener noreferrer" className="inline-block group font-serif text-blush relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white overflow-hidden">
+                              <m.span variants={reveal} className="block">Instagram <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span>
+                              </m.span>
+                            </a>
                           </div>         
                           <div className="w-full md:w-1/2">
-                            <p className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-1">I am a:</p>
+                            <p className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-1 relative overflow-hidden">
+                              <m.span variants={reveal} className="block">I am a:</m.span>
+                            </p>
+
                             <div className="mb-8 flex">
                               <button
                                 className={`block transition-colors ease-in-out duration-500 text-black w-auto py-2 px-3 font-sans uppercase text-sm md:text-base font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-4 ${ formType == 'client' ? 'bg-blush hover:bg-blush' : 'bg-pink hover:bg-blush' }`}
                                 onClick={() => setFormType('client')}
-                              >Client</button>
+                              >
+                                <span className="block relative overflow-hidden">
+                                  <m.span variants={reveal} className="block">Client</m.span>
+                                </span>
+                              </button>
                             
                               <button
                                 className={`block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-auto py-2 px-3 font-sans uppercase text-sm md:text-base font-normal leading-[1.15] md:leading-[1.2] tracking-tight ${ formType == 'model' ? 'bg-blush hover:bg-blush' : 'bg-pink hover:bg-blush' }`}
                                 onClick={() => setFormType('model')}
-                              >Model</button>
+                              >
+                                <span className="block relative overflow-hidden">
+                                  <m.span variants={reveal} className="block">Model</m.span>
+                                </span>
+                              </button>
                             </div>
 
                             { formType == 'client' && (
@@ -73,7 +115,11 @@ export default function Contact() {
                                 <label for="Message" className="sr-only">Message Images</label>
                                 <textarea id="Message" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Your enquiry..." />
 
-                                <button type="submit" className="block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">Send Message</button>
+                                <button type="submit" className="block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">
+                                  <span className="block relative overflow-hidden">
+                                    <m.span variants={reveal} className="block">Send Message</m.span>
+                                  </span>
+                                </button>
                               </form>
                             )}
 
@@ -94,7 +140,11 @@ export default function Contact() {
                                 <label for="image" className="sr-only">Image Uploads</label>
                                 <input type="file" multiple id="image" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="Image Uploads" />
 
-                                <button type="submit" className="block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">Send Message</button>
+                                <button type="submit" className="block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">
+                                  <span className="block relative overflow-hidden">
+                                    <m.span variants={reveal} className="block">Send Message</m.span>
+                                  </span>
+                                </button>
                               </form>
                             )}
                           </div>
@@ -103,18 +153,29 @@ export default function Contact() {
                     </article>
                   </m.main>
 
-                  <m.footer variants={fade} className="p-4 md:p-6 relative bg-black text-pink w-full mt-auto">
+                  <m.footer variants={fade} className="p-4 md:p-6 relative bg-black text-pink w-full mt-auto mb-[-4px]">
                     <div className="flex flex-wrap">
-                      <span className="block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">© Palmar Agency 2021</span>
+                      <span className="block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0 overflow-hidden">
+                        <m.span variants={reveal} className="block">© Palmar Agency 2021</m.span>
+                      </span>
                       
-                      <span className="block w-1/2 md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight md:mr-8 mb-[5px] md:mb-0 md:mr-24">Site by <a href="https://shiftwalk.studio" rel="noopener noreferrer" target="_blank" className="group relative">Shiftwalk <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></span>
-
-                      <span className="hidden md:block w-1/2 md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg ml-auto font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0">
-                        <Link href="/"><a className="group relative">Back to home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
+                      <span className="block w-1/2 md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0 md:mr-24 overflow-hidden pb-[4px]">
+                        <m.span variants={reveal} className="block">
+                          Site by <a href="https://shiftwalk.studio" rel="noopener noreferrer" target="_blank" className="group relative">Shiftwalk <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a>
+                        </m.span>
                       </span>
 
-                      <span className="block w-1/2 md:w-auto text-right md:hidden ml-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0">
-                        <Link href="/"><a className="group relative">Back to home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></a></Link>
+                      <span className="hidden md:block w-1/2 md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg ml-auto font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0">
+                        <Link href="/"><a className="group relative overflow-hidden">
+                          <m.span variants={reveal} className="block">Back to home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></m.span></a></Link>
+                      </span>
+
+                      <span className="block w-auto md:w-auto text-right md:hidden ml-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-[5px] md:mb-0">
+                        <Link href="/">
+                          <a className="group relative overflow-hidden block pb-[4px]">
+                            <m.span variants={reveal} className="block">Back to home <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-1px] md:mb-[-3px]"></span></m.span>
+                          </a>
+                        </Link>
                       </span>
                     </div>
                   </m.footer>
