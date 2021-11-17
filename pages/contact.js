@@ -106,13 +106,13 @@ export default function Contact() {
 
                             { formType == 'client' && (
                               <form className="">
-                                <label for="name" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Name</label>
-                                <input type="text" id="name" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="" />
+                                <label for="name" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Name *</label>
+                                <input type="text" id="name" required className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="" />
 
-                                <label for="email" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Email</label>
-                                <input type="email" id="email" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="" />
+                                <label for="email" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Email *</label>
+                                <input type="email" id="email" required className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="" />
 
-                                <label for="Message" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Message</label>
+                                <label for="Message" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3" required>Your Message *</label>
                                 <textarea id="Message" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
 
                                 <button type="submit" className="block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">
@@ -125,11 +125,11 @@ export default function Contact() {
 
                             { formType == 'model' && (
                               <form className="">
-                                <label for="name" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Name</label>
-                                <input type="text" id="name" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
+                                <label for="name" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Name *</label>
+                                <input type="text" id="name" required className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
 
-                                <label for="email" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Email</label>
-                                <input type="email" id="email" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
+                                <label for="email" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Email *</label>
+                                <input type="email" id="email" required className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
                                 
                                 <div className="flex flex-wrap">
                                   <div className="w-full xl:w-1/2 xl:pr-6">
