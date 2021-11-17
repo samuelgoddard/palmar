@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }) {
     <>
       <DefaultSeo {...SEO} />
 
-      <div className="grain fixed w-full h-full inset-0 pointer-events-none z-[100]"></div>
+      <div className="grain fixed w-full h-full inset-0 pointer-events-none z-[10000]"></div>
       
       <IntroContext.Provider value={[introContext, setIntroContext]}>
         <ThemeContext.Provider value={[themeContext, setThemeContext]}>
