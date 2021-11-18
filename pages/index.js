@@ -23,6 +23,12 @@ export default function Home() {
   const [introContext, setIntroContext] = useContext(IntroContext);
   const [themeContext, setThemeContext] = useContext(ThemeContext);
 
+  useEffect(() => {    
+    setTimeout(() => {
+      setIntroContext(true)
+    }, 4000);
+  }, []);
+
   let colorThemes = ['bg-pink text-black selection:bg-black selection:text-pink', 'bg-green text-black selection:bg-black selection:text-green', 'bg-black text-pink selection:bg-pink selection:text-black', 'bg-brown text-pink selection:bg-pink selection:text-brown', 'bg-off-white text-black selection:bg-black selection:text-white'];
   
 
@@ -61,16 +67,6 @@ export default function Home() {
       transition: { duration: 0.65, ease: [0.83, 0, 0.17, 1] }
     }
   }
-
-  useEffect(() => {
-    if (themeContext !== null) {
-      setThemeContext(Math.floor(Math.random()*5))
-    }
-    
-    setTimeout(() => {
-      setIntroContext(true)
-    }, 4000);
-  }, []);
 
   return (
     <Layout>      
