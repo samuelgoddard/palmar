@@ -67,7 +67,7 @@ export default function Home() {
       setThemeContext(Math.floor(Math.random()*5))
     }
     setTimeout(() => {
-      if (themeContext !== false) {
+      if (introContext !== false) {
         setIntroContext(true)
       }
     }, 4000);
