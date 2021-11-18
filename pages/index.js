@@ -63,7 +63,9 @@ export default function Home() {
   }
 
   useEffect(() => {
-    setThemeContext(Math.floor(Math.random()*5))
+    if (themeContext !== null) {
+      setThemeContext(Math.floor(Math.random()*5))
+    }
     setTimeout(() => {
       setIntroContext(true)
     }, 4000);
