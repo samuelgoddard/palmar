@@ -40,10 +40,6 @@ export default function App({ Component, pageProps }) {
 
   let colorThemes = ['bg-pink text-black', 'bg-green text-black', 'bg-black text-pink', 'bg-brown text-pink', 'bg-off-white text-black'];
 
-  useEffect(() => {
-    setThemeContext(Math.floor(Math.random()*5))
-  }, [themeContext]);
-
   return (
     <>
       <DefaultSeo {...SEO} />
