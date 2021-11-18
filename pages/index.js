@@ -66,10 +66,9 @@ export default function Home() {
     if (themeContext !== null) {
       setThemeContext(Math.floor(Math.random()*5))
     }
+    
     setTimeout(() => {
-      if (introContext !== false) {
-        setIntroContext(true)
-      }
+      setIntroContext(true)
     }, 4000);
   }, []);
 

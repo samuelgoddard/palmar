@@ -35,8 +35,8 @@ const imageRevealOut = {
 
 export default function App({ Component, pageProps }) {
   const router = useRouter()
-  const [introContext, setIntroContext] = useState(0);
-  const [themeContext, setThemeContext] = useState(false);
+  const [introContext, setIntroContext] = useState(false);
+  const [themeContext, setThemeContext] = useState([]);
 
   let colorThemes = ['bg-pink text-black', 'bg-green text-black', 'bg-black text-pink', 'bg-brown text-pink', 'bg-off-white text-black'];
 
