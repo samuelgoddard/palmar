@@ -9,6 +9,8 @@ import { ThemeContext } from '@/context/theme'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { IntroContext } from '@/context/intro'
+import Image from 'next/image'
+import image1 from '../public/images/03.jpg'
 
 export default function Founders() {
   const containerRef = useRef(null)
@@ -66,22 +68,27 @@ export default function Founders() {
                         <div className="relative overflow-hidden">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 bg-off-white`}></m.span>
 
-                          <img className="w-full scale-105" src="/images/03.jpg" alt="dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image1}
+                            className="scale-105 w-full"
+                            priority={true}
+                            layout="responsive"
+                            width={1200}
+                            height={1600}
+                          />
                         </div>
                       </div>
                       
                       <div className="w-11/12 md:w-full md:max-w-[380px] xl:max-w-[400px] 2xl:max-w-[440px] 3xl:max-w-[500px] md:mx-auto font-serif text-xl xl:text-2xl leading-tight tracking-tight content md:mt-16 xl:mt-24">
-                        <p>Hello, we are Palmar, a divergent parts-modelling agency repping Black, Asian and all other Ethnic minority hand models across the UK.</p>
 
-                        <p>Palmar blazes its own trail; disturbs the status quo; provides opportunity and support.</p>
+                        <p>Hello, we are Palmar, a divergent boutique parts-modelling agency based in the wonderful multicultural city of London. We represent Black, Asian and all other Ethnic hand models in commercial and editorial advertising campaigns.</p>
 
-                        <p>The agency was founded in view of the fact that there are prejudices in the parts-modelling industry, ethnic parts-models are underrepresented in commercial and editorial advertising campaigns and brands can do more to welcome inclusivity.</p>
+                        <p>Palmar Agency blazes its own trail; disturbs the status quo; provides opportunity and support. Palmar was founded in view of the fact that there are prejudices in the parts-modelling industry, ethnic parts-models are notably underrepresented in advertising campaigns and brands can do more to welcome inclusivity.</p>
 
-                        <p>Palmar Agency concentrates principally on the individual identity and wellbeing of its models, we open the door for trusted and longstanding connections in true and creative spirit. We are over and above a traditional modelling agency, we are a budding creative studio for online content too. The overall desire is to impel diversity through intentional targeted marketing.</p>
+                        <p>Palmar concentrates principally on the individual identity and well-being of its models, we open the door for trusted and longstanding connections in true and creative spirit. We transcend traditional modelling agencies; we are a budding creative studio for online content too. The desire is to impel diversity through intentional targeted marketing.</p>
 
-                        <p>Palmar is presently shooting content for its launch in October, and we are charged to show you all the magic we have conjured with <a href="#">@kelliefrenchstudio</a>.</p>
-
-                        <p>We are taking new model applications and fáilte client enquiries. Get in touch with us at <a href="#">hello@palmar.agency</a> — we would love to join forces!</p>
+                        <p>We are taking model applications. Experienced and aspiring, young and matured, marked at birth, and tatted, are all welcome to apply using our <Link href="/contact"><a className="">contact form</a></Link>.</p>
 
                         <div className="max-w-[320px] bg-blend-color-burn bg-off-white mt-8 mb-4">
                           <img src="/images/signature.png" alt="Vanessa Signature" className="w-full mix-blend-darken" />

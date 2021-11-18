@@ -11,6 +11,12 @@ import { ThemeContext } from '@/context/theme'
 import Link from 'next/link'
 import Image from 'next/image'
 
+import image1 from '../public/images/01.jpg'
+import image2 from '../public/images/02.jpg'
+import image3 from '../public/images/04.jpg'
+import image4 from '../public/images/05.jpg'
+import image5 from '../public/images/06.jpg'
+
 export default function Home() {
   const containerRef = useRef(null)
   
@@ -122,32 +128,118 @@ export default function Home() {
                 <div className="block md:hidden absolute z-100 bottom-0 right-0 w-[100vw] mb-[10vw]">
                     <div className="relative flex flex-row space-x-[20px] md:space-x-[50px] overflow-x-hidden">
                       <div className="animate-marqueeH whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
-                        <div className="h-full w-[65vw] overflow-hidden relative">
-                          <img className="w-[65vw] h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
+                      <div className="h-full w-[65vw] overflow-hidden">
+                          <Image
+                            alt="Hand model"
+                            src={image1}
+                            className="w-[65vw] object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
-                          <img className="w-[65vw] h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image2}
+                            className="w-[65vw] object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
-                          <img className="w-[65vw] h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image3}
+                            className="w-[65vw] object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
-                          <img className="w-[65vw] h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image4}
+                            className="w-[65vw] object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
+                        </div>
+                        <div className="h-full w-[65vw] overflow-hidden">
+                          <Image
+                            alt="Hand model"
+                            src={image5}
+                            className="w-[65vw] object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                       </div>
 
                       <div className="absolute top-0 animate-marqueeH2 whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
-                        <div className="h-full w-[65vw] overflow-hidden">
-                          <img className="w-[65vw] h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
+                      <div className="h-full w-[65vw] overflow-hidden">
+                          <Image
+                            alt="Hand model"
+                            src={image1}
+                            className="w-[65vw] object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
-                          <img className="w-[65vw] h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image2}
+                            className="w-[65vw] object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
-                          <img className="w-[65vw] h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image3}
+                            className="w-[65vw] object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-[65vw] overflow-hidden">
-                          <img className="w-[65vw] h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image4}
+                            className="w-[65vw] object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
+                        </div>
+                        <div className="h-full w-[65vw] overflow-hidden">
+                          <Image
+                            alt="Hand model"
+                            src={image5}
+                            className="w-[65vw] object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                       </div>
                     </div>
@@ -161,85 +253,213 @@ export default function Home() {
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image1}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image2}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image3}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image4}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image5}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image1}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image2}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image3}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                       </div>
 
                       <div className="absolute top-0 transform animate-marquee2 whitespace-nowrap flex flex-col space-y-[20px] md:space-y-[50px] w-full">
-                        <div className="h-full w-full overflow-hidden relative">
+                      <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image1}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image2}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image3}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image4}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/01.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image5}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/02.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image1}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/03.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image2}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                         <div className="h-full w-full overflow-hidden relative">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 ${colorThemes[themeContext]}`}></m.span>
 
-                          <img className="w-full h-full object-cover object-center scale-105" src="/images/04.jpg" alt="Dog" />
+                          <Image
+                            alt="Hand model"
+                            src={image3}
+                            className="w-full object-cover object-center scale-105"
+                            layout="responsive"
+                            priority={true}
+                            width={1334 }
+                            height={1613}
+                          />
                         </div>
                       </div>
                     </div>

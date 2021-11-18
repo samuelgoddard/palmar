@@ -6,6 +6,12 @@ import SEO from '@/helpers/seo.config'
 import { IntroContext } from '@/context/intro'
 import { ThemeContext } from '@/context/theme'
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
+import image1 from '../public/images/01.jpg'
+import image2 from '../public/images/02.jpg'
+import image3 from '../public/images/04.jpg'
+import image4 from '../public/images/05.jpg'
+import image5 from '../public/images/06.jpg'
 
 const introEnd = {
   visible: { opacity: 0 },
@@ -89,7 +95,14 @@ export default function App({ Component, pageProps }) {
                     </m.div>
 
                     <div>
-                      <img className="w-full scale-105" src="/images/01.jpg" alt="Dog" />
+                      <Image
+                        alt="Hand model"
+                        src={image1}
+                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                        priority={true}
+                        width={1334 }
+                        height={1613}
+                      />
                     </div>
 
                     <m.div
@@ -98,7 +111,14 @@ export default function App({ Component, pageProps }) {
                       variants={imageLoad}
                       transition={{ delay: 0.5, duration: 0 }}
                     >
-                      <img className="scale-105 absolute inset-0 object-cover object-center h-full w-full" src="/images/02.jpg" alt="Dog" />
+                      <Image
+                        alt="Hand model"
+                        src={image1}
+                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                        priority={true}
+                        layout="fill"
+                        objectFit="cover"
+                      />
                     </m.div>
                     
                     <m.div
@@ -107,7 +127,14 @@ export default function App({ Component, pageProps }) {
                       variants={imageLoad}
                       transition={{ delay: 0.75, duration: 0 }}
                     >
-                      <img className="scale-105 absolute inset-0 object-cover object-center h-full w-full" src="/images/03.jpg" alt="Dog" />
+                      <Image
+                        alt="Hand model"
+                        src={image2}
+                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                        priority={true}
+                        layout="fill"
+                        objectFit="cover"
+                      />
                     </m.div>
                     
                     <m.div
@@ -116,7 +143,14 @@ export default function App({ Component, pageProps }) {
                       variants={imageLoad}
                       transition={{ delay: 1, duration: 0 }}
                     >
-                      <img className="scale-105 absolute inset-0 object-cover object-center h-full w-full" src="/images/04.jpg" alt="Dog" />
+                      <Image
+                        alt="Hand model"
+                        src={image3}
+                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                        priority={true}
+                        layout="fill"
+                        objectFit="cover"
+                      />
                     </m.div>
 
                     <m.div
@@ -125,7 +159,14 @@ export default function App({ Component, pageProps }) {
                       variants={imageLoad}
                       transition={{ delay: 1.25, duration: 0 }}
                     >
-                      <img className="scale-105 absolute inset-0 object-cover object-center h-full w-full" src="/images/01.jpg" alt="Dog" />
+                      <Image
+                        alt="Hand model"
+                        src={image4}
+                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                        priority={true}
+                        layout="fill"
+                        objectFit="cover"
+                      />
                     </m.div>
 
                     <m.div
@@ -134,7 +175,14 @@ export default function App({ Component, pageProps }) {
                       variants={imageLoad}
                       transition={{ delay: 1.5, duration: 0 }}
                     >
-                      <img className="scale-105 absolute inset-0 object-cover object-center h-full w-full" src="/images/02.jpg" alt="Dog" />
+                      <Image
+                        alt="Hand model"
+                        src={image5}
+                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                        priority={true}
+                        layout="fill"
+                        objectFit="cover"
+                      />
                     </m.div>
 
                     <m.div
@@ -143,7 +191,14 @@ export default function App({ Component, pageProps }) {
                       variants={imageLoad}
                       transition={{ delay: 1.75, duration: 0 }}
                     >
-                      <img className="scale-105 absolute inset-0 object-cover object-center h-full w-full" src="/images/03.jpg" alt="Dog" />
+                      <Image
+                        alt="Hand model"
+                        src={image1}
+                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                        priority={true}
+                        layout="fill"
+                        objectFit="cover"
+                      />
                     </m.div>
                     
                     <m.div
@@ -152,7 +207,14 @@ export default function App({ Component, pageProps }) {
                       variants={imageLoad}
                       transition={{ delay: 2, duration: 0 }}
                     >
-                      <img className="scale-105 absolute inset-0 object-cover object-center h-full w-full" src="/images/04.jpg" alt="Dog" />
+                      <Image
+                        alt="Hand model"
+                        src={image2}
+                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                        priority={true}
+                        layout="fill"
+                        objectFit="cover"
+                      />
                     </m.div>
 
                     <m.div
@@ -161,7 +223,14 @@ export default function App({ Component, pageProps }) {
                       variants={imageLoad}
                       transition={{ delay: 2.25, duration: 0 }}
                     >
-                      <img className="scale-105 absolute inset-0 object-cover object-center h-full w-full" src="/images/01.jpg" alt="Dog" />
+                      <Image
+                        alt="Hand model"
+                        src={image3}
+                        className="scale-105 absolute inset-0 object-cover object-center h-full w-full"
+                        priority={true}
+                        layout="fill"
+                        objectFit="cover"
+                      />
                     </m.div>
                   </div>
                 </m.div>
