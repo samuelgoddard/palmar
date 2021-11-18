@@ -24,6 +24,7 @@ export default function Home() {
   const [themeContext, setThemeContext] = useContext(ThemeContext);
 
   let colorThemes = ['bg-pink text-black selection:bg-black selection:text-pink', 'bg-green text-black selection:bg-black selection:text-green', 'bg-black text-pink selection:bg-pink selection:text-black', 'bg-brown text-pink selection:bg-pink selection:text-brown', 'bg-off-white text-black selection:bg-black selection:text-white'];
+  
 
   const reveal = {
     initial: { y: '100%' },
@@ -62,6 +63,7 @@ export default function Home() {
   }
 
   useEffect(() => {
+    setThemeContext(Math.floor(Math.random()*5))
     setTimeout(() => {
       setIntroContext(true)
     }, 4000);

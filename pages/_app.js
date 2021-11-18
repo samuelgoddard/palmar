@@ -37,10 +37,6 @@ export default function App({ Component, pageProps }) {
   const router = useRouter()
   const [introContext, setIntroContext] = useState(false);
   const [themeContext, setThemeContext] = useState(0);
-  
-  useEffect(() => {
-    setThemeContext(Math.floor(Math.random()*5))
-  }, []);
 
   let colorThemes = ['bg-pink text-black', 'bg-green text-black', 'bg-black text-pink', 'bg-brown text-pink', 'bg-off-white text-black'];
 
