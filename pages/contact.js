@@ -58,11 +58,11 @@ export default function Contact() {
                       <div className="w-full md:w-11/12 xl:w-10/12 mx-auto overflow-hidden">
                         <div className="flex flex-wrap">
                           <div className="w-full md:w-1/2 mb-12 md:mb-0 md:pr-12 xl:pr-24">
-                            <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-1 relative overflow-hidden">
+                            <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-5 relative overflow-hidden">
                               <m.span variants={reveal} className="block">All enquiries</m.span>
                             </span>
 
-                            <a href="mailto:hello@palmar.agency" className="inline-block group font-serif text-blush relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white overflow-hidden">
+                            <a href="mailto:hello@palmar.agency" className="inline-block group font-serif text-blush relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white underline overflow-hidden">
                               <m.span variants={reveal} className="block">
                                 hello@palmar.agency <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span>
                               </m.span>
@@ -70,12 +70,22 @@ export default function Contact() {
 
                             <hr className="border-b border-t-0 border-current my-6 md:my-8 xl:my-12 opacity-50" />
 
-                            <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-1 relative overflow-hidden">
+                            <span className="block font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-5 relative overflow-hidden">
                               <m.span variants={reveal} className="block">Social</m.span>
                             </span>
 
-                            <a href="https://www.instagram.com/palmaragency/" target="_blank" rel="noopener noreferrer" className="inline-block group font-serif text-blush relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white overflow-hidden">
+                            <a href="https://www.instagram.com/palmaragency/" target="_blank" rel="noopener noreferrer" className="block group font-serif mb-3 underline text-blush relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white overflow-hidden">
                               <m.span variants={reveal} className="block">Instagram <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span>
+                              </m.span>
+                            </a>
+
+                            <a href="https://twitter.com/palmaragency/" target="_blank" rel="noopener noreferrer" className="block group font-serif mb-3 underline text-blush relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white overflow-hidden">
+                              <m.span variants={reveal} className="block">Twitter <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span>
+                              </m.span>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@palmaragency/" target="_blank" rel="noopener noreferrer" className="block group font-serif mb-3 underline text-blush relative text-xl md:text-2xl font-normal leading-[1.15] md:leading-[1.2] tracking-tight mr-8 hover:text-white transition-colors ease-in-out duration-500 focus:text-white overflow-hidden">
+                              <m.span variants={reveal} className="block">TikTok <span className="absolute bottom-0 left-0 right-0 border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500 mb-[-3px]"></span>
                               </m.span>
                             </a>
                           </div>         
