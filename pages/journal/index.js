@@ -85,7 +85,7 @@ export default function Journal(initialData) {
                     </div>
 
                     <div className="w-full mt-auto">
-                      <div className="font-serif leading-none tracking-tight content mt-12 md:mt-16 xl:mt-24">
+                      <div className="font-serif leading-none tracking-tight mt-12 md:mt-16 xl:mt-24">
 
                         <ul className="journal-list">
                           {journal?.map((item, i) => {
