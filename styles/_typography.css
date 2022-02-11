@@ -85,3 +85,19 @@
 .custom-file-input:hover::before {
   @apply bg-pink text-black;
 }
+
+.journal-list {
+  a {
+    @apply transition-opacity ease-in-out duration-300;
+  }
+
+  &:hover {
+    a {
+      @apply opacity-30;
+
+      &:hover {
+        @apply opacity-100 !important;
+      }
+    }
+  }
+}

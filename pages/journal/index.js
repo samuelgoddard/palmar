@@ -87,17 +87,19 @@ export default function Journal(initialData) {
                     <div className="w-full mt-auto">
                       <div className="font-serif leading-none tracking-tight content mt-12 md:mt-16 xl:mt-24">
 
-                        <ul>
+                        <ul className="journal-list">
                           {journal?.map((item, i) => {
                             return (
-                              <li className={`block border-b border-pink py-4 md:py-6 xl:py-7 ${ i == 0 && 'border-t'}`} key={i}>
+                              <li className={`block border-b border-pink ${ i == 0 && 'border-t'}`} key={i}>
                                 <Link href={`/journal/${item.slug.current}`}>
-                                  <a className="flex flex-wrap items-end overflow-hidden">
-                                    <m.span variants={revealNoDelay} className="block w-full pb-1 md:pb-0 md:w-[110px] xl:w-[200px] text-xs md:text-sm xl:text-base">P/{ i < 9 && (0)}{i + 1}</m.span>
-                                    <m.span variants={revealNoDelay} className="block text-2xl md:text-3xl md:leading-tight xl:text-4xl xl:leading-tight">{item.title}</m.span>
-                                    <m.span variants={revealNoDelay} className="block ml-auto">
-                                      <svg className="w-[20px] md:w-[24px] xl:w-[28px] mb-[5px]" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 13.906h23.296l-8.454 8.454 2.259 2.259 12.31-12.31L17.1 0l-2.258 2.258 8.453 8.454H0v3.194Z" fill="currentColor"/></svg>
-                                    </m.span>
+                                  <a className="block relative py-4 md:py-6 xl:py-7">
+                                    <div className="flex flex-wrap items-end overflow-hidden w-full">
+                                      <m.span variants={revealNoDelay} className="block w-full pb-1 md:pb-0 md:w-[110px] xl:w-[200px] text-xs md:text-sm xl:text-base">P/{ i < 9 && (0)}{i + 1}</m.span>
+                                      <m.span variants={revealNoDelay} className="block text-2xl md:text-3xl md:leading-tight xl:text-4xl xl:leading-tight">{item.title}</m.span>
+                                      <m.span variants={revealNoDelay} className="block ml-auto">
+                                        <svg className="w-[20px] md:w-[24px] xl:w-[28px] mb-[5px]" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 13.906h23.296l-8.454 8.454 2.259 2.259 12.31-12.31L17.1 0l-2.258 2.258 8.453 8.454H0v3.194Z" fill="currentColor"/></svg>
+                                      </m.span>
+                                    </div>
                                   </a>
                                 </Link>
                               </li>    
