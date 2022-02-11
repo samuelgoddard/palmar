@@ -21,3 +21,15 @@ export const reveal = {
 		transition: { duration: 0.65, ease: [0.83, 0, 0.17, 1] }
 	}
 }
+
+export const revealNoDelay = {
+	initial: { y: '100%' },
+  enter: { 
+    y: 0,
+    transition: { delay: 0.2, duration: 0.65, ease: [0.83, 0, 0.17, 1] }
+  },
+	exit: {
+    y: '100%',
+		transition: { duration: 0.65, ease: [0.83, 0, 0.17, 1] }
+	}
+}

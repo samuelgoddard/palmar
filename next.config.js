@@ -1,7 +1,7 @@
 module.exports = {
   swcMinify: true,
   images: {
-    domains: ['placedog.net'],
+    domains: ['cdn.sanity.io'],
   },
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in client production build

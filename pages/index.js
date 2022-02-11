@@ -525,10 +525,10 @@ export default function Home() {
                       </div>
 
                       <div className="2xl:ml-auto flex space-x-4 md:space-x-6">
-                        <Link href="/founders-message">
+                        <Link href="/journal">
                           <a className="block uppercase text-[12px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
                               <m.span variants={reveal} className="block">
-                              Founders Message
+                              Journal
 
                               <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
                             </m.span>
