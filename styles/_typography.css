@@ -101,3 +101,7 @@
     }
   }
 }
+
+.journal-image {
+  aspect-ratio: 9/11;
+}

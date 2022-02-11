@@ -87,7 +87,7 @@ export default function JournalSlug(initialData) {
                       </span>
                     </div>
 
-                    <div className="w-full flex flex-wrap">
+                    <div className="w-full flex flex-wrap items-start">
                       <div className="w-full md:w-5/12 lg:w-1/2 xl:w-7/12 mt-[13px] md:mt-[-13vw] mb-6 md:mb-0 overflow-hidden" data-scroll data-scroll-speed={1.3}>
                         <div className="relative overflow-hidden">
                           <m.span variants={revealImage} className={`block z-[1000] w-full h-full absolute inset-0 bg-off-white`}></m.span>
@@ -95,11 +95,12 @@ export default function JournalSlug(initialData) {
                           <Image
                             alt="Hand model"
                             src={current.supportingImage.asset.url}
-                            className="scale-105 w-full"
+                            className="scale-105 w-full absolute inset-0 object-cover object-center"
                             priority={true}
                             layout="responsive"
-                            width={current.supportingImage.asset.metadata.dimensions.width}
-                            height={current.supportingImage.asset.metadata.dimensions.height}
+                            objectFit
+                            width={1200}
+                            height={1600}
                           />
                         </div>
                       </div>
