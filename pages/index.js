@@ -509,7 +509,7 @@ export default function Home() {
                           <span className="block overflow-hidden">
                             <m.span variants={reveal} className="block">
                               <span className="block translate-y-[-8px]">
-                                <span className="italic">asian</span> and <span className="italic">ethnic</span>
+                                <span className="italic">brown</span> and <span className="italic">ethnic</span>
                               </span>
                             </m.span>
                           </span>
