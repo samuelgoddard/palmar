@@ -115,15 +115,18 @@ export default function Contact() {
                             </div>
 
                             { formType == 'client' && (
-                              <form className="">
+                              <form
+                                action="https://formspree.io/f/mnqwrdyl"
+                                method="POST"
+                              >
                                 <label for="name" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Name *</label>
-                                <input type="text" id="name" required className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="" />
+                                <input type="text" name="name" id="name" required className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="" />
 
                                 <label for="email" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Email *</label>
-                                <input type="email" id="email" required className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="" />
+                                <input type="email" name="email" id="email" required className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" placeholder="" />
 
                                 <label for="Message" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3" required>Your Message *</label>
-                                <textarea id="Message" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
+                                <textarea id="Message" name="message" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
 
                                 <button type="submit" className="block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">
                                   <span className="block relative overflow-hidden">
@@ -134,22 +137,26 @@ export default function Contact() {
                             )}
 
                             { formType == 'model' && (
-                              <form className="">
+                              <form
+                                action="https://formspree.io/f/xjvlzwdl"
+                                method="POST"
+                                enctype="multipart/form-data"
+                              >
                                 <label for="name" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Name *</label>
-                                <input type="text" id="name" required className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
+                                <input type="text" name="name" id="name" required className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
 
                                 <label for="email" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Email *</label>
-                                <input type="email" id="email" required className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
+                                <input type="email" name="email" id="email" required className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
                                 
                                 <div className="flex flex-wrap">
                                   <div className="w-full xl:w-1/2 xl:pr-6">
                                     <label for="insta" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Instagram Handle</label>
-                                    <input type="text" id="insta" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink"  />
+                                    <input type="text" name="insta" id="insta" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink"  />
                                   </div>
 
                                   <div className="w-full xl:w-1/2">
                                     <label for="portfolio" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Portfolio URL</label>
-                                    <input type="text" id="portfolio" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink"  />
+                                    <input type="text" name="portfolio" id="portfolio" className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink"  />
                                   </div>
                                 </div>
 
@@ -157,7 +164,7 @@ export default function Contact() {
 
                                 <p className="text-sm font-serif text-blush max-w-[420px] mb-5">Your shots do not have to be professional but, clear and taken against a plain background. Nails must be free of polish or enhancements. A bonus if your photos display your creativity.</p>
 
-                                <input type="file" multiple id="image" className="custom-file-input transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
+                                <input type="file" name="upload" multiple id="image" className="custom-file-input transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
 
                                 <button type="submit" className="block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">
                                   <span className="block relative overflow-hidden">

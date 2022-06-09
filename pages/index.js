@@ -552,6 +552,16 @@ export default function Home() {
                             <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
                           </m.span>
                         </a>
+                        
+                        <Link href="/terms">
+                          <a className="block uppercase  text-[12px] md:text-base 2xl:text-[14px] 3xl:text-base group overflow-hidden">
+                            <m.span variants={reveal} className="block">
+                              Terms
+                              
+                              <span className="block border-b border-current w-full group-hover:w-0 group-focus:w-0 transition-all ease-in-out duration-500"></span>
+                            </m.span>
+                          </a>
+                        </Link>
                       </div>
                     </div>
                   </article>
