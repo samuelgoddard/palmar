@@ -116,7 +116,7 @@ export default function Contact() {
 
                             { formType == 'client' && (
                               <form
-                                action="https://formspree.io/f/mnqwrdyl"
+                                action="https://formspree.io/f/mrgjwkqd"
                                 method="POST"
                               >
                                 <label for="name" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Name *</label>
@@ -138,9 +138,8 @@ export default function Contact() {
 
                             { formType == 'model' && (
                               <form
-                                action="https://formspree.io/f/xjvlzwdl"
+                                action="https://formspree.io/f/xbjwvyoe"
                                 method="POST"
-                                enctype="multipart/form-data"
                               >
                                 <label for="name" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Your Name *</label>
                                 <input type="text" name="name" id="name" required className="transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />

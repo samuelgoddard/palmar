@@ -5,8 +5,16 @@ export default {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://palmar.vercel.app/',
+    url: 'https://palmaragency.co.uk',
     site_name: 'Palmar',
+    images: [
+      {
+        url: '/images/social.jpg',
+        width: 1200,
+        height: 630,
+        alt: `Palmar Portrait`,
+      },
+    ],
   },
   twitter: {
     handle: '@samuelgoddard',
