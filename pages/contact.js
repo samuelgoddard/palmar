@@ -160,11 +160,11 @@ export default function Contact() {
                                   </div>
                                 </div>
 
-                                <label for="image" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Upload Images</label>
+                                {/* <label for="image" className="block font-sans uppercase text-sm md:text-sm font-normal tracking-tight text-blush mb-3">Upload Images</label>
 
                                 <p className="text-sm font-serif text-blush max-w-[420px] mb-5">Your shots do not have to be professional but, clear and taken against a plain background. Nails must be free of polish or enhancements. A bonus if your photos display your creativity.</p>
 
-                                <input type="file" name="upload" multiple id="image" className="custom-file-input transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" />
+                                <input type="file" name="upload" multiple id="image" className="custom-file-input transition-colors ease-in-out duration-500 bg-transparent text-blush border-blush border w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mb-3 md:mb-6 focus:outline-none focus:border-pink placeholder-blush focus:text-pink" /> */}
 
                                 <button type="submit" className="block transition-colors ease-in-out duration-500 bg-pink hover:bg-blush text-black w-full px-6 py-5 font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight">
                                   <span className="block relative overflow-hidden">

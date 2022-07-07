@@ -71,9 +71,10 @@ export default function Journal(initialData) {
                 initial="initial"
                 animate="enter"
                 exit="exit"
-                className="min-h-screen flex flex-wrap"
+                className="min-h-screen flex flex-wrap "
               >
-                <m.main variants={fade} className="p-4 md:p-6 relative pb-16 md:pb-24 xl:pb-32 bg-black text-pink selection:bg-pink selection:text-black w-full flex">
+                <m.div variants={fade} className="bg-black text-pink selection:bg-pink selection:text-black w-full flex flex-wrap">
+                <m.main variants={fade} className="p-4 md:p-6 relative pb-16 md:pb-24 xl:pb-32 w-full flex">
 
                   <article className="flex flex-wrap w-full">
                     <div className="w-full relative z-10">
@@ -112,7 +113,7 @@ export default function Journal(initialData) {
                   </article>
                 </m.main>
 
-                <m.footer variants={fade} className="p-4 md:p-6 relative bg-black text-pink selection:bg-pink selection:text-black w-full flex items-end">
+                <m.footer variants={fade} className="p-4 md:p-6 relative w-full flex items-end">
                   <div className="flex flex-wrap w-full">
                     <span className="block w-full md:w-auto font-sans uppercase text-sm md:text-base xl:text-lg font-normal leading-[1.15] md:leading-[1.15] tracking-tight mr-8 mb-[5px] md:mb-0">© Palmar Agency 2021</span>
                     
@@ -129,6 +130,7 @@ export default function Journal(initialData) {
                     </span>
                   </div>
                 </m.footer>
+                </m.div>
               </m.div>
             </LazyMotion>
           </div>
