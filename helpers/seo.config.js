@@ -17,7 +17,7 @@ export default {
     ],
   },
   twitter: {
-    handle: '@samuelgoddard',
+    handle: '@palmaragency',
     site: '@site',
     cardType: 'summary_large_image',
   },
