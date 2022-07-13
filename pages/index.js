@@ -473,7 +473,7 @@ export default function Home() {
                     
                     <div className="2xl:flex 2xl:flex-wrap 2xl:items-end 2xl:w-[53vw] md:mt-auto relative z-[100]">
                       <div className="max-w-[280px] md:max-w-[550px] mb-6 xl:mb-10 2xl:mb-0 ml-[-2px] md:ml-0 -mt-5 md:mt-0">
-                        <h1 className="font-serif text-[32px] md:text-[48px] xl:text-[54px] 2xl:text-[60px] leading-[1.35] md:leading-none tracking-tighter mb-[-8px]">
+                        <h1 className="font-serif text-[32px] md:text-[48px] xl:text-[54px] 2xl:text-[60px] leading-[1.35]  md:leading-none tracking-tighter mb-[-8px]">
                           <span className="block overflow-hidden">
                             <m.span variants={reveal} className="block mb-[-10px] md:mb-0">
                               <span className="block translate-y-[-8px]">
