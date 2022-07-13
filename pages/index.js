@@ -126,7 +126,7 @@ export default function Home() {
                 </div>
 
                 {/* Mobile */}
-                <div className="block md:hidden absolute z-100 bottom-0 right-0 w-[100vw] mb-[10vw]">
+                <div className="block md:hidden absolute z-100 bottom-0 right-0 w-[100vw] mb-[5vw]">
                     <div className="relative flex flex-row space-x-[20px] md:space-x-[50px] overflow-x-hidden">
                       <div className="animate-marqueeH whitespace-nowrap flex flex-row space-x-[20px] md:space-x-[50px]">
                       <div className="h-full w-[65vw] overflow-hidden">
@@ -472,10 +472,10 @@ export default function Home() {
                     </div>
                     
                     <div className="2xl:flex 2xl:flex-wrap 2xl:items-end 2xl:w-[53vw] md:mt-auto relative z-[100]">
-                      <div className="max-w-[280px] md:max-w-[550px] mb-6 xl:mb-10 2xl:mb-0 ml-[-2px] md:ml-0">
-                        <h1 className="font-serif text-[32px] md:text-[48px] xl:text-[54px] 2xl:text-[60px] leading-[1.13] md:leading-none tracking-tighter mb-[-8px]">
+                      <div className="max-w-[280px] md:max-w-[550px] mb-6 xl:mb-10 2xl:mb-0 ml-[-2px] md:ml-0 -mt-5 md:mt-0">
+                        <h1 className="font-serif text-[32px] md:text-[48px] xl:text-[54px] 2xl:text-[60px] leading-[1.35] md:leading-none tracking-tighter mb-[-8px]">
                           <span className="block overflow-hidden">
-                            <m.span variants={reveal} className="block">
+                            <m.span variants={reveal} className="block mb-[-10px]">
                               <span className="block translate-y-[-8px]">
                                 A leading parts-
                               </span>
@@ -483,7 +483,7 @@ export default function Home() {
                           </span>
 
                           <span className="block overflow-hidden">
-                            <m.span variants={reveal} className="block">
+                            <m.span variants={reveal} className="block mb-[-10px]">
                               <span className="block translate-y-[-8px]">
                               modelling agency
                               </span>
@@ -491,7 +491,7 @@ export default function Home() {
                           </span>
 
                           <span className="block overflow-hidden">
-                            <m.span variants={reveal} className="block">
+                            <m.span variants={reveal} className="block mb-[-10px]">
                               <span className="block translate-y-[-8px]">
                               with a passion for
                               </span>
@@ -499,7 +499,7 @@ export default function Home() {
                           </span>
 
                           <span className="block overflow-hidden">
-                            <m.span variants={reveal} className="block">
+                            <m.span variants={reveal} className="block mb-[-10px]">
                               <span className="block translate-y-[-8px]">
                               positively raising
                               </span>
@@ -507,7 +507,7 @@ export default function Home() {
                           </span>
 
                           <span className="block overflow-hidden">
-                            <m.span variants={reveal} className="block">
+                            <m.span variants={reveal} className="block mb-[-10px]">
                               <span className="block translate-y-[-8px]">
                                 the hiring of <span className="">Black</span>,
                               </span>
@@ -515,7 +515,7 @@ export default function Home() {
                           </span>
 
                           <span className="block overflow-hidden">
-                            <m.span variants={reveal} className="block">
+                            <m.span variants={reveal} className="block mb-[-10px]">
                               <span className="block translate-y-[-8px]">
                                 <span className="">Brown</span> & other <span className="">Ethnic</span>
                               </span>
@@ -523,7 +523,7 @@ export default function Home() {
                           </span>
 
                           <span className="block overflow-hidden">
-                            <m.span variants={reveal} className="block">
+                            <m.span variants={reveal} className="block mb-[-10px]">
                               <span className="block translate-y-[-8px]">
                                 hand models.
                               </span>
