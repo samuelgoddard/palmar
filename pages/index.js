@@ -475,7 +475,7 @@ export default function Home() {
                       <div className="max-w-[280px] md:max-w-[550px] mb-6 xl:mb-10 2xl:mb-0 ml-[-2px] md:ml-0 -mt-5 md:mt-0">
                         <h1 className="font-serif text-[32px] md:text-[48px] xl:text-[54px] 2xl:text-[60px] leading-[1.35] md:leading-none tracking-tighter mb-[-8px]">
                           <span className="block overflow-hidden">
-                            <m.span variants={reveal} className="block mb-[-10px]">
+                            <m.span variants={reveal} className="block mb-[-10px] md:mb-0">
                               <span className="block translate-y-[-8px]">
                                 A leading parts-
                               </span>
@@ -483,7 +483,7 @@ export default function Home() {
                           </span>
 
                           <span className="block overflow-hidden">
-                            <m.span variants={reveal} className="block mb-[-10px]">
+                            <m.span variants={reveal} className="block mb-[-10px] md:mb-0">
                               <span className="block translate-y-[-8px]">
                               modelling agency
                               </span>
@@ -491,7 +491,7 @@ export default function Home() {
                           </span>
 
                           <span className="block overflow-hidden">
-                            <m.span variants={reveal} className="block mb-[-10px]">
+                            <m.span variants={reveal} className="block mb-[-10px] md:mb-0">
                               <span className="block translate-y-[-8px]">
                               with a passion for
                               </span>
@@ -499,7 +499,7 @@ export default function Home() {
                           </span>
 
                           <span className="block overflow-hidden">
-                            <m.span variants={reveal} className="block mb-[-10px]">
+                            <m.span variants={reveal} className="block mb-[-10px] md:mb-0">
                               <span className="block translate-y-[-8px]">
                               positively raising
                               </span>
@@ -507,7 +507,7 @@ export default function Home() {
                           </span>
 
                           <span className="block overflow-hidden">
-                            <m.span variants={reveal} className="block mb-[-10px]">
+                            <m.span variants={reveal} className="block mb-[-10px] md:mb-0">
                               <span className="block translate-y-[-8px]">
                                 the hiring of <span className="">Black</span>,
                               </span>
@@ -515,7 +515,7 @@ export default function Home() {
                           </span>
 
                           <span className="block overflow-hidden">
-                            <m.span variants={reveal} className="block mb-[-10px]">
+                            <m.span variants={reveal} className="block mb-[-10px] md:mb-0">
                               <span className="block translate-y-[-8px]">
                                 <span className="">Brown</span> & other <span className="">Ethnic</span>
                               </span>
