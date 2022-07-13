@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'RecklessNeue';
-  src: url('../public/fonts/RecklessNeueTRIAL-Regular.woff2') format('woff2'),
-      url('../public/fonts/RecklessNeueTRIAL-Regular.woff') format('woff');
+  src: url('../public/fonts/RecklessNeue-Regular.woff2') format('woff2'),
+      url('../public/fonts/RecklessNeue-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

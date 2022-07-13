@@ -472,12 +472,12 @@ export default function Home() {
                     </div>
                     
                     <div className="2xl:flex 2xl:flex-wrap 2xl:items-end 2xl:w-[53vw] md:mt-auto relative z-[100]">
-                      <div className="max-w-[260px] md:max-w-[500px] mb-6 xl:mb-10 2xl:mb-0 ml-[-2px] md:ml-0">
-                        <h1 className="font-serif text-[28px] md:text-[48px] xl:text-[54px] 2xl:text-[64px] leading-none tracking-tighter mb-[-8px]">
+                      <div className="max-w-[280px] md:max-w-[550px] mb-6 xl:mb-10 2xl:mb-0 ml-[-2px] md:ml-0">
+                        <h1 className="font-serif text-[32px] md:text-[48px] xl:text-[54px] 2xl:text-[60px] leading-[1.13] md:leading-none tracking-tighter mb-[-8px]">
                           <span className="block overflow-hidden">
                             <m.span variants={reveal} className="block">
                               <span className="block translate-y-[-8px]">
-                                Palmar is a
+                                A leading parts-
                               </span>
                             </m.span>
                           </span>
@@ -485,7 +485,7 @@ export default function Home() {
                           <span className="block overflow-hidden">
                             <m.span variants={reveal} className="block">
                               <span className="block translate-y-[-8px]">
-                                divergent parts
+                              modelling agency
                               </span>
                             </m.span>
                           </span>
@@ -493,7 +493,7 @@ export default function Home() {
                           <span className="block overflow-hidden">
                             <m.span variants={reveal} className="block">
                               <span className="block translate-y-[-8px]">
-                                modelling agency
+                              with a passion for
                               </span>
                             </m.span>
                           </span>
@@ -501,7 +501,7 @@ export default function Home() {
                           <span className="block overflow-hidden">
                             <m.span variants={reveal} className="block">
                               <span className="block translate-y-[-8px]">
-                                representing <span className="italic">black</span>,
+                              positively raising
                               </span>
                             </m.span>
                           </span>
@@ -509,7 +509,15 @@ export default function Home() {
                           <span className="block overflow-hidden">
                             <m.span variants={reveal} className="block">
                               <span className="block translate-y-[-8px]">
-                                <span className="italic">brown</span> and <span className="italic">ethnic</span>
+                                the hiring of <span className="">Black</span>,
+                              </span>
+                            </m.span>
+                          </span>
+
+                          <span className="block overflow-hidden">
+                            <m.span variants={reveal} className="block">
+                              <span className="block translate-y-[-8px]">
+                                <span className="">Brown</span> & other <span className="">Ethnic</span>
                               </span>
                             </m.span>
                           </span>

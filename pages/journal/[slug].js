@@ -99,8 +99,8 @@ export default function JournalSlug(initialData) {
                             priority={true}
                             layout="responsive"
                             objectFit
-                            width={1200}
-                            height={1600}
+                            width={900}
+                            height={1300}
                           />
                         </div>
                       </div>
